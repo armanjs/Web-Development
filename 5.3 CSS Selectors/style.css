@@ -1,0 +1,34 @@
+ol {
+  margin-left: -40px;
+  margin-top: -20px;
+  list-style-position: inside;
+}
+
+/* Write your CSS below, don't change the rules above. */
+
+p { /* set all <p> elements to red */
+  color: red;
+}
+
+/* set the elements with the attribute class="note" to the given font size 
+  this is case sensitive so make sure the class name matches */
+.note { /* class selector format => .class-name */
+  font-size: 20px
+}
+
+/* set the elements with id="id-selector-demo" to green */
+#id-selector-demo { /* id selector format => #id-name */
+  color: green
+}
+
+/* class => can be used for many elements
+id => can only be used for one element per HTML file and that id should be completely unique */
+
+/* set all of the <li> elements with the attribute (value="4") and set them to blue */
+li[value="4"] { /* attribute selector => html-element[attribute] */
+  color: blue
+}
+
+* { /* select all */
+  text-align: center
+}
