@@ -1,0 +1,30 @@
+/* Write your code here: */
+
+/* it can be an element, id, or class */
+
+/* Group selector */ 
+h1, h2 { /* select both h1 and h2 */
+    color: blueviolet;
+}
+
+/* Child selector (1 level deep only) */ 
+.box > p { /* parent > child */
+    color: firebrick;
+} /* only apply this rule to this child not the other .done classes */
+
+/* Descendant selector */
+.box li { /* Ancestor Descendant */
+    color: blue;
+} /* great option when we have hundreds of <li> and we only need a specific 
+
+/* Chaining selector (Apply where ALL selectors are true */
+
+li.done { /* element.class (no space and enter the element first since .doneli looks like a class name */
+    color: seagreen;
+}
+
+/* Combining combiners */
+
+ul p.done { /* element element.class => Ancestor selector + Chaining selector*/
+    font-size: 0.5rem;
+}

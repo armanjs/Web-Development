@@ -1,0 +1,26 @@
+/* Don't change the existing CSS. */
+
+.box {
+  background-color: blue;
+  padding: 10px;
+}
+
+p {
+  color: yellow;
+  margin: 0;
+  padding: 0;
+}
+
+#outer-box { /* this id selector is more specific than the class selector and it will override .box */
+  background-color:purple;
+  padding: 20px;
+}
+
+.inner-box{ /* this specificity needs to be placed after .box to override certain properties */
+  background-color: red;
+  
+}
+
+.white-text { /* set the class to be white */
+  color: white;
+}
