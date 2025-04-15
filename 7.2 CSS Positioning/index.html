@@ -1,0 +1,52 @@
+<!--https://appbrewery.github.io/css-positioning/-->
+<!DOCTYPE html>
+<html>
+
+<!-- Static Positioning: HTML's default positioning, 
+each item will be added to the bottom of another element -->
+
+<!-- Relative Positioning: Relative to its default position
+takes a static position and moves it relative to it (relative to it's default position) -->
+
+<!-- Absolute Positioning: Position relative to nearest positioned ancestor or top left corner of the webpage
+It will choose its position based on the closest parent
+z-index moves the positioning behind or in front of the other elements
+When selecting absolute positioning it takes the elements out of the original HTML flow and 
+puts it on another layer. to put it behind everything we can set it to -1. Everything is defaulted to 0 -->
+
+<!-- Fixed Positioning: Relative to the top left corner of the browser window 
+even when you scroll up or down it will stay there. Position is outside of the margin -->
+<head>
+  <title>CSS Positioning Exercise</title>
+  <style>
+    /* Write your code here */
+    .blue-box {
+      background-color: blue;
+      width: 500px;
+      height: 300px;
+      position: relative;
+      top: 200px;
+      left: 200px;
+    }
+    .red-circle {
+      background-color: red;
+      width: 200px;
+      height: 200px;
+      border-radius: 50%; /* this creates a circle */
+      position: absolute;
+      top: 150px;
+      left: 250px;
+    }
+
+  </style>
+</head>
+
+<body>
+  <div class="blue-box">
+    <div class="red-circle">
+    </div>
+  </div>
+
+</body>
+
+</html>
