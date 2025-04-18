@@ -12,10 +12,11 @@
       width: 500px;
     }
 
-    @media (max-width: 600px) {
+    @media (max-width: 600px) { /* @media (breakpoint)
 
-      /* CSS for screens below or equal to 600px wide */
-      div {
+      /* CSS for screens below or equal to 600px wide 
+      if the max-width is less than 600px then use the styles below */
+      div { /* override default styling */
         height: 200px;
         width: 200px;
       }
