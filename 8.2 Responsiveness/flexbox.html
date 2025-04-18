@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Flexbox</title>
+  <style>
+    /* flex box is mostly in 1 dimension (x or y axis) */
+    .flex-container {
+      display: flex;
+    }
+
+    .card {
+      background: blue;
+      border: 30px solid white;
+      height: 100px;
+      flex: 1; /* give all the .cards an equal width distribution */
+    }
+
+    .first {
+      flex: 2; /* overwrite to be twice the width of the normal cards */
+    }
+
+    .second {
+      flex: 0.5; /* overwrite to be half the width of the normal cards */
+    }
+  </style>
+</head>
+
+<body>
+  <h1>CSS Flexbox</h1>
+  <div class="flex-container">
+    <div class="first card"></div>
+    <div class="second card"></div>
+    <div class="card"></div>
+    <div class="card"></div>
+  </div>
+
+
+</body>
+
+</html>
