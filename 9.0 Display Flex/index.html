@@ -19,13 +19,15 @@
     .container {
       padding: 10px;
       background-color: gold;
+      display: flex; /* adding this will turn all the items in the 'container' into an inline flexbox */
+      gap: 1rem;
     }
 
   </style>
 </head>
 
 <body>
-  <div class="container">
+  <div class="container"> <!-- container is the flex box -->
     <p>Page Layout Methods</p>
 
     <li><a href="./html-table.html">HTML Table</a></li>
