@@ -13,18 +13,23 @@
     .container {
       color: white;
       border: 5px solid gold;
-      display: flex;
+      display: inline-flex; /* we need to set it to INLINE so that the width adjusts accordingly */
       flex-direction: column; /* flex-direction: column => y-axis || flex-direction: row => x-axis */
       /* column => main axis: top to bottom || corss axis: left to right */
       /* flex-direction defaults to 'row' */
       /* flex-basis expands the element along the main axis */
       flex-basis: 100px; /* this will not work in the parent element */
+      /* width: 3rem; not a good idea */
     }
 
     /*
-Select all the elements that are the direct
-children of the .container class.
+      Select all the elements that are the direct
+      children of the .container class.
     */
+
+    .container > div { /* or .container > * */
+      flex-basis: 100px; /* the flex basis gets applied in the y-axis since flex-direction: column */
+    }
 
     .red {background-color: #eb4d4b;}
     .orange {background-color: #f0932b;}
