@@ -6,6 +6,15 @@ body {
   flex-direction: column;
   min-height: 95vh;
 }
+
+#dancing-script {
+  font-family: "Dancing Script", cursive;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  color: darkolivegreen;
+}
+
 .main {
   flex: 1;
 }
@@ -17,5 +26,54 @@ h1 {
 footer {
   text-align: right;
   color: midnightblue;
+}
+
+.tile-image {
+  width: 250px;
+  padding: 10pt;
+  float: left; /* need this to make the text float to the right */
+}
+
+.right .tile-image {
+  float: right;
+}
+
+.card {
+  width: 45%;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+@media (max-width: 640px) {
+
+  .logo {
+    margin-left: 20%;
+  }
+
+  h1 {
+    font-size: 3rem; 
+    text-align: center;
+  }
+
+  .tile-image{
+    width: 100%;
+  }
+
+  .card {
+    width: 100%;
+    display: block;
+    text-align: justify;
+  }
+
+  .card img {
+    object-fit: cover;
+  }
+  
 }
 
