@@ -7,19 +7,36 @@
   <title>Flex Direction</title>
   <!-- HINT:
   https://developer.mozilla.org/en-US/docs/Web/CSS/Universal_selectors
-  https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors/Combinators 
+  https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors/Combinators
+  https://css-tricks.com/snippets/css/a-guide-to-flexbox/ 
+  https://appbrewery.github.io/flex-layout/
+  https://appbrewery.github.io/flexboxfroggy/
+  https://appbrewery.github.io/flexbox-sizing-exercise/
+  
+  order of importance in a flex box
+  content width < width < flex-basis < min/max-width
+  max-width looks at the longest possible line of the text 
+  min-width looks at the longest word
+
   -->
   <style>
-    .container {
+    .container { /* parent */
       color: white;
       border: 5px solid gold;
       display: inline-flex; /* we need to set it to INLINE so that the width adjusts accordingly */
-      flex-direction: column; /* flex-direction: column => y-axis || flex-direction: row => x-axis */
+      flex-direction: row; /* flex-direction: column => y-axis || flex-direction: row => x-axis */
       /* column => main axis: top to bottom || corss axis: left to right */
       /* flex-direction defaults to 'row' */
       /* flex-basis expands the element along the main axis */
       flex-basis: 100px; /* this will not work in the parent element */
       /* width: 3rem; not a good idea */
+      flex-wrap: nowrap; /* can be changed from the container (wrap-reverse wraps to the top) */
+      width: 100%;
+      justify-content: flex-start; /* sets the distribution of the content along the main axis */
+      /* flex-start/end only works if there is a space left in the parent container */
+      height: 50vh; /* vh = vertical height needs to be set before align items */
+      align-items: flex-start  /* sets the distribution of the content along the cross access */
+      /* align items will NOT WORK if flex-wrap is set to wrap */
     }
 
     /*
@@ -28,7 +45,13 @@
     */
 
     .container > div { /* or .container > * */
-      flex-basis: 100px; /* the flex basis gets applied in the y-axis since flex-direction: column */
+      /* width of each item will be ignored once flex-basis is set */
+      flex-basis: 100px; /* the flex basis gets applied in the y-axis since flex-direction: column (width of each item) */
+      /* flex-basis: 0 flex-shrink: 1 and flex-grow:0 is the default */
+      flex-shrink: 1; /* if set to 1 it will respect the flex-basis untill the minimum word length of each container */
+      flex-grow: 0; /* if set to 1 it will grow to fill up the remaining space */
+      /* flex: 1 1 0; grow shrink basis */
+      /* flex can be set to flex:1; flex:2; flex:3; to take 1x 2x 3x the screen */
     }
 
     .red {background-color: #eb4d4b;}
@@ -37,7 +60,14 @@
     .green {background-color: #6ab04c;}
     .blue {background-color: #4834d4;}
     .indigo {background-color: #30336b;}
-    .purple {background-color: #be2edd;}
+    .purple {background-color: #be2edd; order: 1;} 
+
+    /* all of the elements have an order of 0, if an order: 1 then it will be pushed to the end */
+    /* flex-wrap is set to nowrap by default. if we set it to nowrap then when the user shrinks the
+    window, they wont be able to see the remainder of the elements 
+    If it is set to wrap then the elements will wrap around the width of the window 
+    align-self: flex-end; can be used to move one item */
+
   </style>
 </head>
 
