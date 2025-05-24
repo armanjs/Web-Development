@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Auto Size Grid</title>
+  <style>
+    .grid-container {
+      /* https://appbrewery.github.io/grid-sizing/ */
+      display: grid; 
+      /* auto will try to fit 100% of the available horizontal space */
+      grid-template-rows: 100px auto; /* fit content */
+      /* auto row however will NOT fill up the vertical space instead it 
+      will try to fit whatever content that's available */
+      grid-template-columns: 200px auto; /* fill 100% */
+    }
+
+    .grid-item {
+      font-size: 3rem;
+      background-color: darkviolet;
+      border: 5px solid goldenrod;
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Auto Size Grid</h1>
+  <div class="grid-container">
+    <div class="grid-item">1</div>
+    <div class="grid-item">2</div>
+    <div class="grid-item">3</div>
+    <div class="grid-item">4</div>
+  </div>
+</body>
+
+</html>
