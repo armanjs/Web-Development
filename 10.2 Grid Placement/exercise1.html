@@ -13,8 +13,9 @@
 
     .container {
       height: 100vh;
-      display: grid;
+      display: grid; /* it is only going to occupy as much vertical space as there are content */
       gap: 3rem;
+      /* grid tracks */
       grid-template-columns: 1fr 1fr 1.5fr;
       grid-template-rows: 1fr 1fr;
     }
@@ -27,6 +28,9 @@
       /* TODO: Use Flexbox to align the text to the center horizontally and vertically. 
       See goal1 image.
       */
+      display: flex; /* we need to set the item to flex before using any of its properties */
+      align-items: center;
+      justify-content: center;
     }
   </style>
 </head>
