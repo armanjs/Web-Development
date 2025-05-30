@@ -24,18 +24,18 @@
       color: white;
       border: 5px solid gold;
       display: inline-flex; /* we need to set it to INLINE so that the width adjusts accordingly */
-      flex-direction: row; /* flex-direction: column => y-axis || flex-direction: row => x-axis */
+      flex-direction: column; /* flex-direction: column => y-axis || flex-direction: row => x-axis */
       /* column => main axis: top to bottom || corss axis: left to right */
       /* flex-direction defaults to 'row' */
       /* flex-basis expands the element along the main axis */
       flex-basis: 100px; /* this will not work in the parent element */
       /* width: 3rem; not a good idea */
       flex-wrap: nowrap; /* can be changed from the container (wrap-reverse wraps to the top) */
-      width: 100%;
+      /*width: 100%; */
       justify-content: flex-start; /* sets the distribution of the content along the main axis */
       /* flex-start/end only works if there is a space left in the parent container */
-      height: 50vh; /* vh = vertical height needs to be set before align items */
-      align-items: flex-start  /* sets the distribution of the content along the cross access */
+      height: 100vh; /* vh = vertical height needs to be set before align items */
+      /*align-items: flex-start  /* sets the distribution of the content along the cross access */
       /* align items will NOT WORK if flex-wrap is set to wrap */
     }
 
@@ -48,8 +48,8 @@
       /* width of each item will be ignored once flex-basis is set */
       flex-basis: 100px; /* the flex basis gets applied in the y-axis since flex-direction: column (width of each item) */
       /* flex-basis: 0 flex-shrink: 1 and flex-grow:0 is the default */
-      flex-shrink: 1; /* if set to 1 it will respect the flex-basis untill the minimum word length of each container */
-      flex-grow: 0; /* if set to 1 it will grow to fill up the remaining space */
+      /*flex-shrink: 0; /* if set to 1 it will respect the flex-basis untill the minimum word length of each container */
+      /*flex-grow: 1; /* if set to 1 it will grow to fill up the remaining space */
       /* flex: 1 1 0; grow shrink basis */
       /* flex can be set to flex:1; flex:2; flex:3; to take 1x 2x 3x the screen */
     }
