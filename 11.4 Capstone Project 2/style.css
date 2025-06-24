@@ -1,0 +1,32 @@
+.background {
+    background-image: url(000032050017.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+}
+
+#caveat-font {
+  font-family: "Caveat", cursive;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+#sevillana-regular {
+  font-family: "Sevillana", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+.profile-img {
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+    object-fit: cover;
+    object-position: top;
+}
+
+body {
+    background-color: antiquewhite;
+}
