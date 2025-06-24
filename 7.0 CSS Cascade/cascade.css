@@ -1,0 +1,27 @@
+/* position */
+
+li { /* since blue is after red, it will override red making the text color blue */
+    color: red;
+    color: blue;
+}
+
+/* Specificity */
+/* <li id="first-id" class="first-class" draggable> */
+
+li {color: blue;}              /* 4) element (all <li> elements => least specific) */
+.first-class {color: red;}     /* 3) class */
+li[draggable] {color: purple;} /* 2) attribute */
+#first-id {color: orange;}     /* 1) id selector (only one id name per page => most specific, this will be shown) */
+
+/* Type 
+
+<link rel="stylesheet" href="style.css">  3) external
+<style><style>                            2) internal
+<h1 style=" "> Hello</h1>                 1) inline (this will be shown) */
+
+/* Importance */
+
+li {
+    color: red;
+    color: green !important; 
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- https://appbrewery.github.io/gridgarden/ -->
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grid Placement</title>
+  <style>
+    body {
+      padding: 0;
+      margin: 0;
+    }
+
+    .container {
+      height: 100vh; /* 100% viewport height */
+      display: grid;
+      gap: 3rem; /* replaces padding and margin */
+      grid-template-columns: 1fr 1fr 1.5fr; /* 3 cols last col a bit wider */
+      grid-template-rows: 1fr 1fr; /* 2 rows of equal height */
+    }
+
+    .item {
+      font-size: 5rem;
+      color: white;
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: blueviolet;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+
+    .cowboy {
+      background-color: #00B9FF;
+      grid-column: span 2; /* span 2 cols => grid-column-start: 1 grid-column-end: 3 */
+      /* grid-column-start: 1; starts from the most left hand side col
+         grid-column-end: -1; extends the column all the way to the right hand side */
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="item cowboy">🤠</div>
+    <div class="item astronaut">👨‍🚀</div>
+    <div class="item book">📖</div>
+  </div>
+</body>
+
+</html>

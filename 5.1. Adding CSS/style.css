@@ -1,0 +1,6 @@
+/* h1{} CSS element selector => selects the HTML tag to apply these rules. 
+In this case it's targetting ALL h1 elements */
+h1{ 
+    color: green;
+ /* property: value */
+}
